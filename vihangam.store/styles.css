@@ -1,0 +1,348 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  line-height: 1.6;
+  color: #2c3e50;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Hero */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #6b5b52 0%, #5b4b42 50%, #4a3f35 100%);
+  color: white;
+  overflow: hidden;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 30% 60%, rgba(212, 175, 140, 0.1) 0%, transparent 50%),
+              radial-gradient(circle at 70% 30%, rgba(200, 120, 180, 0.05) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+.badge {
+  display: inline-block;
+  background: rgba(212, 175, 140, 0.18);
+  color: #e6c9a8;
+  padding: 8px 20px;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 25px;
+  border: 1px solid rgba(212, 175, 140, 0.28);
+}
+
+.domain-name {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.2rem, 8vw, 4rem);
+  font-weight: 700;
+  margin-bottom: 15px;
+  line-height: 1.1;
+}
+
+.tld {
+  font-size: 0.5em;
+  opacity: 0.75;
+}
+
+.tagline {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.3rem;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 25px;
+  font-weight: 400;
+}
+
+.price-tag {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #e6c9a8;
+  margin-bottom: 25px;
+}
+
+.cta-button {
+  display: inline-block;
+  background: #c88db4;
+  color: white;
+  padding: 12px 38px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  font-size: 0.95rem;
+}
+
+.cta-button:hover {
+  background: #b5779d;
+  transform: translateY(-2px);
+}
+
+/* E-Commerce Section */
+.ecommerce-section {
+  padding: 70px 0;
+  background: white;
+}
+
+.ecommerce-section h2 {
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+  font-size: 2.2rem;
+  margin-bottom: 50px;
+  color: #2c3e50;
+}
+
+.ecommerce-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+.ecommerce-card {
+  background: #f8f9fa;
+  padding: 35px 25px;
+  border-radius: 12px;
+  text-align: center;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.ecommerce-card:hover {
+  background: white;
+  border-color: #c88db4;
+  box-shadow: 0 8px 25px rgba(200, 141, 180, 0.15);
+  transform: translateY(-5px);
+}
+
+.ecommerce-card .icon {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.ecommerce-card h3 {
+  color: #4a3f35;
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+
+.ecommerce-card p {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+/* Business Section */
+.business-section {
+  padding: 70px 0;
+  background: linear-gradient(135deg, #f5e6d3 0%, #e8d4c0 100%);
+}
+
+.business-section h2 {
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+  font-size: 2.2rem;
+  margin-bottom: 50px;
+  color: #2c3e50;
+}
+
+.business-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+}
+
+.option {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 30px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.option-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: #c88db4;
+  color: white;
+  border-radius: 50%;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.option h3 {
+  color: #4a3f35;
+  margin-bottom: 10px;
+}
+
+.option p {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+/* Benefits Section */
+.benefits-section {
+  padding: 70px 0;
+  background: white;
+}
+
+.benefits-section h2 {
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+  font-size: 2.2rem;
+  margin-bottom: 50px;
+  color: #2c3e50;
+}
+
+.benefits-list {
+  max-width: 700px;
+  margin: 0 auto;
+  display: grid;
+  gap: 20px;
+}
+
+.benefit {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  background: #f8f9fa;
+  padding: 25px;
+  border-radius: 12px;
+}
+
+.check {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 36px;
+  width: 36px;
+  height: 36px;
+  background: #c88db4;
+  color: white;
+  border-radius: 50%;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.benefit-text h3 {
+  color: #4a3f35;
+  margin-bottom: 5px;
+}
+
+.benefit-text p {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+/* Info Section */
+.info-section {
+  padding: 70px 0;
+  background: linear-gradient(135deg, #f5e6d3 0%, #e8d4c0 100%);
+}
+
+.info-box {
+  max-width: 700px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+}
+
+.info-item {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 25px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.info-item .label {
+  display: block;
+  color: #c88db4;
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 8px;
+}
+
+.info-item .value {
+  display: block;
+  color: #2c3e50;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+/* Footer */
+.footer {
+  background: #2c3e50;
+  color: white;
+  padding: 40px 0;
+  text-align: center;
+}
+
+.footer-domain {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #e6c9a8;
+}
+
+.footer-text {
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 15px;
+  font-size: 0.95rem;
+}
+
+.footer-copyright {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.8rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .ecommerce-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .business-options {
+    grid-template-columns: 1fr;
+  }
+
+  .info-box {
+    grid-template-columns: 1fr;
+  }
+
+  .benefits-list {
+    padding: 0 10px;
+  }
+}
